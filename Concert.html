@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+
+    <meta name="viewport" content="width=device-width">
+    <title>CONCENTUS</title>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script1.js" type="text/javascript"></script>
+
+
+	<link rel="stylesheet" href="style1.css">
+
+
+
+</head>
+
+
+
+
+<body style="background-color:white;">
+
+
+
+
+
+
+
+
+
+	<div class="playlists">
+
+
+		<div class="up-triangle"></div>
+
+		<div class="song">
+
+			DOOMSDAY SONATA
+			
+			
+			<button onclick="playVid()" class="btn" type="button">
+				<div id="button1"></div>
+			</button>	
+			
+
+		</div>
+
+		<div class="down-triangle"></div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="videocontainer1">
+
+		
+
+		<video id="video1">
+	  		<source src="Branches-shrinked.mp4" type="video/mp4">
+		</video>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="topsection1container">
+		
+		
+		<div class="topsection1">
+
+			<h1>CONCENTUS MUSICORUM FINIS</h1>	
+
+			<hr width="100%" color="black" size="30px" />
+
+			<div class="horizontalcontainer">
+				<div class="textcontainer1">
+					<p1>
+						The pursuit for the end is one destined to be trapped in an amphitheater of apocolyptic ruptures. The end of a physical entity is reaching the inevitable breakpoint of fractalization, yet the end of a melody is not its goal: but nonetheless, had the melody not reached its end it would not have reached its goal either. You are invited on this jouurney to bear witness the manifestation of such melodies: Welcome to the Concert of the end.
+					</p1>
+				</div>
+
+				<div class="imagecontainer">
+					<img src="concert.jpeg" id="theater">
+				</div>	
+
+				<div id="scrollcontainer">
+					<img src="scroll.jpg" id="scroll">
+				</div>	
+
+
+
+			</div>
+
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	
+
+var vid = document.getElementById("video1");
+
+function playVid() {
+    if (vid.paused) {
+          vid.play()
+    }
+
+    else {
+        vid.pause()
+    }
+}
+
+
+vid.addEventListener("timeupdate", function () {
+    console.log('checking time...');
+    if (vid.currentTime > vid.duration - 0.5) {
+        // 0.5 is seconds before end.
+        vid.pause();
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
